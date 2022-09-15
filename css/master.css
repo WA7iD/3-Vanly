@@ -1,0 +1,499 @@
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-color);
+  box-shadow: inset 0 0 6px 0px rgba(0, 0, 0, 0.763);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  background-color: var(--btn-color);
+  border-radius: 100vw;
+}
+
+/* Handle on hover */
+
+:root {
+  --bk1-color: #000;
+  --form1-color: #292929;
+  --btn-color: #ffa628;
+  --text1-color: #ffffff;
+  --dark-text-color: #7c7c7c;
+
+  --bk2-color: #ffffff;
+  --form2-color: #e7e7e7;
+  --text2-color: #000;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s;
+}
+p {
+  font-weight: 600;
+}
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+
+  color: var(--text1-color);
+
+  background-color: var(--bk1-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Black Han Sans", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.toTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: #000;
+  position: fixed;
+  opacity: 0;
+  bottom: -50px;
+  right: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 2px var(--btn-color);
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px var(--btn-color) solid;
+  z-index: 100;
+}
+.toTop:hover {
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.382);
+}
+.overlay {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  background-color: var(--main-light-color);
+  border-radius: 100%;
+  z-index: -1;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(50px);
+}
+/* ============================= START HEADER ============================ */
+header {
+  padding: 20px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+.logo:hover > img {
+}
+.logo h1 {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.logo img {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  transform: rotate(0);
+  transition: 0.8s;
+}
+.header__nav ul {
+  display: flex;
+}
+.nav__link {
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text1-color);
+}
+
+/* ============================= END HEADER ============================ */
+
+/* ============================= START LANDING ============================ */
+.landing {
+  padding: 60px 0;
+}
+.landing .main__head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing .main__head h1 {
+  font-size: 50px;
+}
+.landing .main__head p {
+  width: 46%;
+  margin: 40px 0;
+}
+.landing__holder {
+  height: 610px;
+}
+.landing__content {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.landing__pic1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  overflow: hidden;
+}
+.landing__pic1 img {
+  width: 100%;
+  transition: 150s;
+}
+.landing__content:hover > .landing__pic1 img {
+  transform: rotate(3600deg);
+}
+.landing__pic2 {
+  border-radius: 50%;
+  background-color: #252236;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 2;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ============================= END LANDING ============================ */
+
+/* <!-- ============================= STRAT turntables ============================  --> */
+.turntables {
+  padding: 110px 0;
+}
+.main__head h1 {
+  font-size: 46px;
+  text-transform: uppercase;
+}
+.main__head p {
+  margin: 30px 0;
+  font-size: 17px;
+  width: 65%;
+  line-height: 1.4;
+}
+.truntables__items__holder,
+.vinyls__items__holder {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+.truntables__item,
+.vinyls__item {
+  width: 24%;
+  cursor: pointer;
+
+  margin-bottom: 5%;
+}
+.truntables__item:hover > img {
+  filter: brightness(1.4);
+}
+.truntables__item img {
+  width: 100%;
+}
+.btn__view {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  color: var(--btn-color);
+  cursor: pointer;
+}
+.btn__view:hover > i {
+  margin-left: 40px;
+}
+.btn__view p {
+  text-transform: initial;
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn__view i {
+  margin-left: 30px;
+  font-size: 14px;
+}
+.who-are-we .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.who__pic {
+  width: 45%;
+  padding: 40px;
+}
+.who__pic img {
+  width: 100%;
+}
+.who__text {
+  padding: 10px;
+  width: 50%;
+}
+.who__text p {
+  font-size: 16px;
+  width: 100%;
+}
+/* <!-- ============================= END turntables ============================  --> */
+
+/* <!-- ============================= START vinyls ============================  --> */
+.vinyls {
+  padding: 110px 0;
+}
+.vinyls .main__head p {
+  width: 60%;
+}
+.vinyls__item {
+  position: relative;
+  cursor: pointer;
+}
+.vinyls__item:hover {
+  filter: brightness(1.4);
+}
+.vinyls__item:hover > .cd {
+  right: 30px;
+}
+.vinyls__item img {
+  width: 60%;
+}
+.vinyls__item .cd {
+  width: 60%;
+  position: absolute;
+  right: 60px;
+  z-index: -1;
+}
+
+/* <!-- ============================= end vinyls ============================  --> */
+
+/* ============================= START CONTACT =============================== */
+.contacts {
+  padding: 110px 0;
+}
+.contacts .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts .main__head h1 {
+  text-transform: uppercase;
+}
+.contacts__info {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__text {
+  width: 40%;
+}
+.contacts__map {
+  width: 50%;
+  height: 60%;
+}
+.contacts iframe {
+  width: 100%;
+}
+/* ============================= END CONTACT =============================== */
+
+/* ============================= START emdil =============================== */
+.email {
+  padding: 110px 0;
+}
+.email .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.email__text {
+  width: 48%;
+}
+.email__text p {
+  width: 90%;
+}
+.email__submit {
+  width: 48%;
+  cursor: pointer;
+  position: relative;
+}
+.email__submit input {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: var(--dark-text-color);
+  background-color: var(--form1-color);
+}
+.email__submit .btn {
+  background-color: var(--btn-color);
+  position: absolute;
+  right: 6px;
+
+  top: 6px;
+  padding: 14px 20px;
+  border-radius: 5px;
+}
+/* ============================= START email =============================== */
+
+/* ============================= START FOOTER =============================== */
+footer {
+  padding: 50px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer nav {
+  display: flex;
+}
+footer ul {
+  display: flex;
+  padding-right: 20px;
+}
+footer ul li {
+  margin: 0 20px;
+  color: var(--dark-text-color);
+}
+footer .social__icons img {
+  width: 25px;
+}
+.burger__list {
+  display: none;
+}
+/* ============================= END FOOTER =============================== */
+/* =============================START RESPONSIVE============================= */
+@media (max-width: 767px) {
+  * {
+    text-align: center;
+  }
+  .burger__list {
+    display: block;
+    font-size: 20px;
+  }
+  nav {
+    display: none;
+  }
+  .container {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  footer nav {
+    display: none;
+  }
+  .landing .main__head h1 {
+    font-size: 40px;
+  }
+  .landing .main__head p {
+    width: 100%;
+  }
+  .turntables .main__head p {
+    width: 100%;
+  }
+  .truntables__item {
+    width: 46%;
+  }
+  .who-are-we .container {
+    flex-wrap: wrap;
+  }
+  .who-are-we .main__head h1 {
+    font-size: 40px;
+  }
+  .who__pic {
+    width: 100%;
+    order: 1;
+  }
+  .who__text {
+    width: 100%;
+  }
+  .vinyls {
+    padding: 10px 0;
+  }
+  .vinyls .main__head p {
+    width: 100%;
+  }
+  .vinyls__item {
+    width: 46%;
+  }
+
+  .contacts .container {
+    flex-wrap: wrap;
+  }
+  .contacts .main__head h1 {
+    font-size: 40px;
+  }
+  .contacts__text {
+    width: 100%;
+    margin-bottom: 7px;
+  }
+
+  .contacts__map {
+    width: 100%;
+  }
+  .email {
+    padding: 10px 0;
+  }
+  .email .container {
+    flex-wrap: wrap;
+  }
+  .email__submit {
+    width: 100%;
+  }
+  .email__text {
+    width: 100%;
+    text-align: center;
+  }
+  .email__text p {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1112px) {
+  .container {
+    padding: 0 20px;
+    max-width: 850px;
+  }
+}
